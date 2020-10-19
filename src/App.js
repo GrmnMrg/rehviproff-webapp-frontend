@@ -1,9 +1,9 @@
 import React from 'react';
 import { observer } from 'mobx-react';
-import UserStore from '../stores/UserStore';
-import UserAPICalls from '../api_calls/UserAPICalls';
-import LoginForm from './LoginForm';
-import SubmitButton from './SubmitButton';
+import UserStore from './stores/UserStore';
+import UserAPICalls from './api_calls/UserAPICalls';
+import LoginForm from './components/LoginForm';
+import SubmitButton from './components/SubmitButton';
 import './App.css';
 
 class App extends React.Component {
