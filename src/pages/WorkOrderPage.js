@@ -1,26 +1,11 @@
 import React from 'react';
 import workorderContent from "./workorder-content";
 import Pdf from 'react-to-pdf';
-import Table from "@material-ui/core/Table";
-import TableHead from "@material-ui/core/TableHead";
-import TableContainer from "@material-ui/core/TableContainer";
-import Paper from "@material-ui/core/Paper";
-import TableBody from "@material-ui/core/TableBody";
-import {TableRow} from "@material-ui/core";
-import TableCell from "@material-ui/core/TableCell";
-import makeStyles from "@material-ui/core/styles/makeStyles";
 import TextField from "@material-ui/core/TextField";
 
 const ref = React.createRef();
 
-const useStyles = makeStyles({
-    table: {
-        width: '40%'
-    }
-});
-
 const WorkOrderPage = ({match}) => {
-    const classes = useStyles();
     const id = match.params.id;
     const workorder = workorderContent.find(workorder => workorder.id === parseInt(id));
 

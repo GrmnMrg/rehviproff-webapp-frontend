@@ -10,6 +10,31 @@ body {
     margin: 1em;
 }
 
+.client-and-car-details .MuiInputLabel-formControl {
+    margin-top: 5px;
+}
+
+.client-and-car-details .MuiInputBase-formControl {
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.faults-and-remarks {
+    width: 50%
+}
+
+.work-description {
+    width: 50%
+}
+
+.required_parties {
+    width: 50%
+}
+
+.required_parties .MuiTextField-root {
+    margin-left: 10px
+}
+
 .form-group {
     position: relative;
     margin-bottom: 1.5rem;
@@ -21,6 +46,10 @@ body {
     padding: 7px 0 0 13px;
     transition: all 200ms;
     opacity: 0.5;
+}
+
+.consent__paragraph p {
+    width: 50%
 }
 
 .form-control:focus + .form-control-placeholder,
