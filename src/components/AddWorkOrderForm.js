@@ -52,7 +52,7 @@ class AddWorkOrderForm extends React.Component {
             <div className={"add-workorder-content"}>
                 <h1>{`TÖÖTELLIMUS nr. / ${this.state.date}`}</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <div className={"client-and-car-details"}>
+                    <div className={"client-and-car-details half-the-width"}>
                         <h2>KLIENDI JA AUTO ANDMED</h2>
                         <div className={"client-details"}>
                             <TextField
@@ -103,7 +103,7 @@ class AddWorkOrderForm extends React.Component {
                             />
                         </div>
                     </div>
-                    <div className={"work-description"}>
+                    <div className={"work-description half-the-width"}>
                         <h2>TÖÖDE LOETELU / VAHETATAVAD DETAILID</h2>
                         <div className={"work-description__textarea"}>
                             <TextField
@@ -118,7 +118,7 @@ class AddWorkOrderForm extends React.Component {
                             />
                         </div>
                     </div>
-                    <div className={"faults-and-remarks"}>
+                    <div className={"faults-and-remarks half-the-width"}>
                         <h2>LEITUD VEAD / MÄRKUSED</h2>
                         <div className={"faults-and-remarks__textarea"}>
                             <TextField
@@ -133,13 +133,13 @@ class AddWorkOrderForm extends React.Component {
                             />
                         </div>
                     </div>
-                    <div className={"consent"}>
+                    <div className={"consent half-the-width"}>
                         <h2>KLIENDI NÕUSOLEK</h2>
                         <div className={"consent__paragraph"}>
                             <p>{this.state.consent}</p>
                         </div>
                     </div>
-                    <div className={"required_parties"}>
+                    <div className={"required_parties half-the-width"}>
                         <h2>TELLIMUSEGA SEOTUD ISIKUD</h2>
                         <div className={"required_parties__textfields"}>
                             <TextField

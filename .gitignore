@@ -6,3 +6,7 @@
 
 # ide specific
 .idea
+
+cypress/integration/examples
+
+debug.log

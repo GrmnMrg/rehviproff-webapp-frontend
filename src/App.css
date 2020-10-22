@@ -14,22 +14,45 @@ body {
     margin-top: 5px;
 }
 
-.client-and-car-details .MuiInputBase-formControl {
+.client-details > div:nth-child(1) {
     margin-right: 10px;
+    width: 66%;
+}
+
+.client-details > div:nth-child(2) {
+    width: 30%;
+}
+
+.car_details--mark_model_reg_nr > div:nth-child(1) {
+    margin-right: 10px;
+    width: 66%;
+}
+
+.car_details--mark_model_reg_nr > div:nth-child(2) {
+    width: 30%;
+}
+
+.car_details--vin_mileage > div:nth-child(1){
+    margin-right: 10px;
+    width: 66%;
+}
+
+.car_details--vin_mileage > div:nth-child(2){
+    width: 30%;
+}
+
+.client-and-car-details .MuiInputBase-formControl {
     margin-bottom: 5px;
 }
 
-.faults-and-remarks {
+.margin-right-small {
+    margin-right: 10px;
+}
+
+.half-the-width {
     width: 50%
 }
 
-.work-description {
-    width: 50%
-}
-
-.required_parties {
-    width: 50%
-}
 
 .required_parties .MuiTextField-root {
     margin-right: 10px;
@@ -67,10 +90,6 @@ body {
     padding: 7px 0 0 13px;
     transition: all 200ms;
     opacity: 0.5;
-}
-
-.consent__paragraph p {
-    width: 50%
 }
 
 .form-control:focus + .form-control-placeholder,
