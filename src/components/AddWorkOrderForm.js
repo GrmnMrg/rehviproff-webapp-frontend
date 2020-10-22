@@ -1,13 +1,17 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
+import workOrderApi from "../api/WorkOrderApi"
+import Button from "@material-ui/core/Button";
+import SaveIcon from "@material-ui/icons/Save";
 
 class AddWorkOrderForm extends React.Component {
 
     constructor(props) {
         super(props);
+        let currentDate = this.getCurrentDate();
         this.state = {
             id: '',
-            date: '',
+            date: currentDate,
             client_name_and_address: "",
             client_phone: "",
             car_mark_and_model: "",
@@ -20,15 +24,13 @@ class AddWorkOrderForm extends React.Component {
             required_parties_client_representative: "",
             required_parties_work_receiver: "",
             required_parties_work_performer: "",
-            consent: [
-                `Käesolevaga kinnitan, et olen tutvunud töid teostava ettevõtte remonditingimustega ja
-            tellinud eelpool kirjeldatud tööd.`,
-                `Olen andnud nende valdusesse eelpool mainitud eseme/esemed kontrolli/remondi teostamise 
-            eesmärgil`,
-                `Luban vajadusel teostada proovisõitu.`
-            ]
+            consent: `Käesolevaga kinnitan, et olen tutvunud töid teostava ettevõtte remonditingimustega ja
+            tellinud eelpool kirjeldatud tööd. Olen andnud nende valdusesse eelpool mainitud eseme/esemed kontrolli/remondi teostamise 
+            eesmärgil. Luban vajadusel teostada proovisõitu.`
+
         }
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(event) {
@@ -40,11 +42,16 @@ class AddWorkOrderForm extends React.Component {
         })
     }
 
+    handleSubmit(event) {
+        let result = workOrderApi.addNewWorkOrder(this.state);
+        event.preventDefault();
+    }
+
     render() {
         return (
-            <div className={"add-workorder-form"}>
-                <h1>{`TÖÖTELLIMUS nr. / ${this.getCurrentDate()}`}</h1>
-                <form>
+            <div className={"add-workorder-content"}>
+                <h1>{`TÖÖTELLIMUS nr. / ${this.state.date}`}</h1>
+                <form onSubmit={this.handleSubmit}>
                     <div className={"client-and-car-details"}>
                         <h2>KLIENDI JA AUTO ANDMED</h2>
                         <div className={"client-details"}>
@@ -143,6 +150,7 @@ class AddWorkOrderForm extends React.Component {
                                 onChange={this.handleChange}
                             />
                             <TextField
+                                className={"required_parties__textfields--margin-right"}
                                 label={"TÖÖ VASTUVÕTJA"}
                                 variant={"outlined"}
                                 name={"work_receiver"}
@@ -150,6 +158,7 @@ class AddWorkOrderForm extends React.Component {
                                 onChange={this.handleChange}
                             />
                             <TextField
+                                className={"required_parties__textfields--margin-left"}
                                 label={"TÖÖ TEOSTAJA"}
                                 variant={"outlined"}
                                 name={"work_performer"}
@@ -157,6 +166,12 @@ class AddWorkOrderForm extends React.Component {
                                 onChange={this.handleChange}
                             />
                         </div>
+                    </div>
+                    <div className={"form-submit-btn"}>
+                        <Button type={"submit"} variant={"contained"} color={"primary"} startIcon={<SaveIcon/>}
+                                size={"large"}>
+                            LISA
+                        </Button>
                     </div>
                 </form>
 

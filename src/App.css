@@ -32,7 +32,28 @@ body {
 }
 
 .required_parties .MuiTextField-root {
-    margin-left: 10px
+    margin-right: 10px;
+    width: 30%
+}
+
+.required_parties .MuiInputLabel-formControl {
+    margin-top: 5px;
+}
+
+.form-submit-btn {
+    margin-top: 10px;
+    width: 50%;
+    display: block;
+}
+
+.form-submit-btn button {
+    float: right;
+    margin: 10px 71px 10px 10px;
+    width: 10em;
+}
+
+.add-workorder-content form {
+    margin-bottom: 10rem;
 }
 
 .form-group {
