@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {observer} from 'mobx-react';
 import UserStore from './stores/UserStore';
-import UserAPICalls from './api_calls/UserAPICalls';
+import UserAPICalls from './api/UserAPICalls';
 import SubmitButton from './components/SubmitButton';
 import './App.css';
 import HomePage from "./pages/HomePage";

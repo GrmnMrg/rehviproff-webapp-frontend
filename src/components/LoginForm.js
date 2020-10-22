@@ -3,7 +3,7 @@ import InputField from './InputField';
 import SubmitButton from './SubmitButton';
 import MessageBox from './MessageBox';
 import UserStore from '../stores/UserStore';
-import UserAPICalls from '../api_calls/UserAPICalls';
+import UserAPICalls from '../api/UserAPICalls';
 
 class LoginForm extends React.Component {
 
