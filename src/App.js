@@ -10,6 +10,7 @@ import NavBar from "./components/NavBar"
 import WorkOrdersListPage from "./pages/WorkOrdersListPage";
 import AddWorkOrderPage from "./pages/AddWorkOrderPage";
 import WorkOrderPage from "./pages/WorkOrderPage";
+import PageNotFound from "./pages/PageNotFound";
 
 class App extends React.Component {
 
@@ -86,6 +87,7 @@ class App extends React.Component {
                                 <Route path="/workorders" component={WorkOrdersListPage} />
                                 <Route path="/add-workorder" component={AddWorkOrderPage} />
                                 <Route path="/workorder/:id" component={WorkOrderPage} />
+                                <Route component={PageNotFound} />
                             </Switch>
                         </div>
                     </div>
